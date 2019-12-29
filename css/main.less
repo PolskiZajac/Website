@@ -1,0 +1,164 @@
+.pm0(){margin: 0;padding: 0;}
+@delay: 0.5vw;
+@size1: 15vw;
+@size2: (@size1 - @delay)/2;
+@size3: (@size2 - @delay)/2;
+
+html {
+  .pm0();
+}
+body {
+  .pm0();
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  color: #000;
+}
+h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5em;
+  margin: 0;
+}
+h2 {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+p#slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.arrow {
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  padding: 3vh 3vw;
+  cursor: pointer;
+}
+#arrow1 {
+  position: absolute;
+  top: 92.5%;
+  left: 50%;
+  animation: appear 4.5s, bounce 1.25s linear 5s infinite alternate;
+}
+#arrow2 {
+  position: absolute;
+  top: 192.5%;
+  left: 50%;
+  animation: appear 9.5s, bounce 1.25s linear 5s infinite alternate;
+}
+#arrow3 {
+  position: absolute;
+  top: 292.5%;
+  left: 50%;
+  animation: appear 14.5s, bounce 1.25s linear 5s infinite alternate;
+}
+#arrow4 {
+  position: absolute;
+  top: 392.5%;
+  left: 50%;
+  animation: appear 19.5s, bounce 1.25s linear 5s infinite alternate;
+}
+ul#menu {
+  list-style: none;
+  position: fixed;
+  left: 50vw;
+  transform: translate(-50%, 0);
+  z-index: 998;
+  width: 100%;
+  text-align: center;
+  li {
+    display: inline-block;
+    &.active a {
+      color: #000;
+      background: #fff;
+      border: #000 solid 1px;
+    }
+    a {
+      color: #fff;
+      background: #000;
+      border: #fff solid 1px;
+      padding: 1vh 1vw;
+      text-decoration: none;
+      transition: 0.25s;
+      &:hover {
+        color: #000;
+        background: #fff;
+        border: #000 solid 1px;
+      }
+    }
+  }
+}
+#menu-controll {
+  display: none;
+  z-index: 999;
+  background: #fff;
+  border-right: #000 solid 1vw;
+  border-bottom: #000 solid 1vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 3.35em;
+  height: 3.35em;
+}
+
+
+
+@keyframes appear {
+  0% {
+    display: none;
+    cursor: default;
+  }
+  90% {
+    display: none;
+    cursor: default;
+  }
+  100% {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+@keyframes bounce {
+  0% {
+    top: 92.5%;
+  }
+  75% {
+    top: 92.5%;
+  }
+  100% {
+    top: 90%;
+  }
+}
+@media (orientation: portrait) {
+  ul#menu {
+    display: none;
+  }
+  ul#menu.activated {
+    display: block;
+    .pm0();
+    top: 0;
+    left: 0;
+    transform: translate(0, 5%);
+    text-align: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+  }
+  ul#menu.activated a {
+    width: 50vw;
+    display: block;
+    padding: 2vh 2vw;
+    margin: 4vw 0;
+  }
+  #menu-controll {
+    display: block;
+  }
+  #blurbox.activated {
+    filter: blur(8px);
+  }
+}

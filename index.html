@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PolskiZajac.pl</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet/less" type="text/css" href="css/main.less">
+		<link rel="stylesheet/less" type="text/css" href="css/design.less">
+		<link rel="stylesheet" href="css/fontello.css">
+		<link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+		<script type="text/javascript" src="js/fullpage.min.js"></script>
+		<script type="text/javascript" src="js/fullpage.extensions.min.js"></script>
+		<script src="js/menu.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+					anchors: ['first', 'second', 'third', 'fourth', 'fifth'],
+					menu:'#menu',
+					scrollingSpeed: 1000,
+					dragAndMove: 'fingersOnly'
+				});
+			});
+		</script>
+		<style>
+			#hamburger, #cross{
+				display: none;
+				position: fixed;
+				font-size: 2.5em;
+				z-index: 999;
+			}
+				@media (orientation:portrait){
+				h1{
+					top: 35%;
+				}
+				p#slogan{
+					top: 55%;
+				}
+				#cross.activated,#hamburger.activated{
+					display:block;
+					cursor:pointer;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="menu-controll">
+			<i class="demo-icon icon-menu activated" id="hamburger"></i>
+			<i class="demo-icon icon-cancel" id="cross"></i>
+		</div>
+	<ul id="menu">
+		<li id="nav1" data-menuanchor="first" class="active"><a href="#first">Strona główna</a></li>
+		<li id="nav2" data-menuanchor="second"><a href="#second">Moje projekty</a></li>
+		<li id="nav3" data-menuanchor="third"><a href="#third">Mój komputer</a></li>
+		<li id="nav4" data-menuanchor="fourth"><a href="#fourth">Moje gry</a></li>
+		<li id="nav5" data-menuanchor="fifth"><a href="#fifth">Autobiografia</a></li>
+	</ul>
+	<div id="fullpage">
+		<div id="blurbox">
+			<div class="section">
+				<h1>Witaj!</h1>
+				<p id="slogan">Strona nadal jest w budowie!</p>
+				<div id="div-container1">
+					<div id="a1"></div>
+					<div id="a2"></div>
+					<div id="a3"></div>
+					<div id="a4"></div>
+					<div id="a5"></div>
+					<div id="a6"></div>
+					<div id="a7"></div>
+					<div id="a8"></div>
+					<div id="a9"></div>
+					<div id="a10"></div>
+					<div id="a11"></div>
+					<div id="a12"></div>
+					<div id="a13"></div>
+					<div id="a14"></div>
+					<div id="a15"></div>
+				</div>
+				<div class="arrow" id="arrow1" onclick="fullpage_api.moveSectionDown();"><i class="demo-icon icon-arrow"></i></div>
+			</div>
+			<div class="section">
+				<h2>Moje projekty</h2>
+				<div id="div-container2">
+					<div id="b1"></div>
+					<div id="b2"></div>
+					<div id="b3"></div>
+					<div id="b4"></div>
+					<div id="b5"></div>
+					<div id="b6"></div>
+					<div id="b7"></div>
+					<div id="b8"></div>
+				</div>
+
+				<div class="arrow" id="arrow2" onclick="fullpage_api.moveSectionDown();"><i class="demo-icon icon-arrow"></i></div>
+			</div>
+			<div class="section">
+				<h2>Mój komputer</h2>
+				<div id="div-container3">
+					<div id="c1"></div>
+					<div id="c2"></div>
+					<div id="c3"></div>
+					<div id="c4"></div>
+					<div id="c5"></div>
+					<div id="c6"></div>
+					<div id="c7"></div>
+				</div>
+				
+				<div class="arrow" id="arrow3" onclick="fullpage_api.moveSectionDown();"><i class="demo-icon icon-arrow"></i></div>
+			</div>
+			<div class="section">
+				<h2>Moje gry</h2>
+				<div id="div-container4">
+					<div id="d1"></div>
+					<div id="d2"></div>
+					<div id="d3"></div>
+					<div id="d4"></div>
+					<div id="d5"></div>
+					<div id="d6"></div>
+					<div id="d7"></div>
+				</div>
+				<div class="arrow" id="arrow4" onclick="fullpage_api.moveSectionDown();"><i class="demo-icon icon-arrow"></i></div>
+			</div>
+			<div class="section">
+				<h2>Autobiografia</h2>
+				<div id="div-container5">
+					<div id="e1"></div>
+					<div id="e2"></div>
+					<div id="e3"></div>
+					<div id="e4"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
