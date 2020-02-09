@@ -1,14 +1,8 @@
-.pm0(){margin: 0;padding: 0;}
-@delay: 0.5vw;
-@size1: 15vw;
-@size2: (@size1 - @delay)/2;
-@size3: (@size2 - @delay)/2;
-
 html {
-  .pm0();
+  @include pm0;
 }
 body {
-  .pm0();
+  @include pm0;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
   color: #000;
@@ -140,7 +134,7 @@ ul#menu {
   }
   ul#menu.activated {
     display: block;
-    .pm0();
+    @include pm0;
     top: 0;
     left: 0;
     transform: translate(0, 5%);

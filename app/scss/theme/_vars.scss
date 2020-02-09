@@ -1,0 +1,9 @@
+@mixin pm0 {
+    margin: 0;
+    padding: 0;
+}
+
+$delay: 0.5vw;
+$size1: 15vw;
+$size2: ($size1 - $delay)/2;
+$size3: ($size2 - $delay)/2;
