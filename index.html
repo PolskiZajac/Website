@@ -1,48 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 	<head>
 		<meta charset="utf-8">
 		<title>PolskiZajac.pl</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script type="text/javascript" src="vendors/fullpage.min.js"></script>
-		<script type="text/javascript" src="vendors/fullpage.extensions.min.js"></script>
-		<script type="text/javascript" src="js/menu.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('#fullpage').fullpage({
-					licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-					anchors: ['first', 'second', 'third', 'fourth', 'fifth'],
-					menu:'#menu',
-					scrollingSpeed: 1000,
-					dragAndMove: 'fingersOnly'
-				});
-			});
-		</script>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="vendors/fontello.css">
-		<link rel="stylesheet" type="text/css" href="vendors/fullpage.min.css" />
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext">
-		<style>
-			#hamburger, #cross{
-				display: none;
-				position: fixed;
-				font-size: 2.5em;
-				z-index: 999;
-			}
-			@media (orientation:portrait){
-				h1{
-					top: 35%;
-				}
-				p#slogan{
-					top: 55%;
-				}
-				#cross.activated,#hamburger.activated{
-					display:block;
-					cursor:pointer;
-				}
-			}
-		</style>
+		<meta name="description" content="Witam na mojej stronce!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+		<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0">
+		<link rel="stylesheet" type="text/css" href="/vendors/fontello.css?v=1.0.0">
+		<link rel="stylesheet" type="text/css" href="/vendors/fullpage.min.css?v=1.0.0" />
+		<style async>@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=latin-ext');#hamburger, #cross{display: none;position: fixed;font-size: 2.5em;z-index: 999}@media (orientation:portrait){h1{top: 35%}p#slogan{top: 55%}#cross.activated,#hamburger.activated{display:block;cursor:pointer}}</style>
 	</head>
 	<body>
 		<div id="menu-controll">
@@ -135,5 +101,20 @@
 	</div>
 	</body>
 	<footer>
+		<script type="text/javascript" src="/vendors/jquery-3.4.1.min.js?v=1.0.0"></script>
+		<script type="text/javascript" src="/vendors/fullpage.min.js?v=1.0.0"></script>
+		<script type="text/javascript" src="/vendors/fullpage.extensions.min.js?v=1.0.0"></script>
+		<script type="text/javascript" src="/js/menu.js?v=1.0.0"></script>
+		<script>
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+					anchors: ['first', 'second', 'third', 'fourth', 'fifth'],
+					menu:'#menu',
+					scrollingSpeed: 1000,
+					dragAndMove: 'fingersOnly'
+				});
+			});
+		</script>
 	</footer>
 </html>
