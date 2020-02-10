@@ -1,0 +1,27 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  @include pm0;
+}
+body{
+  @include pm0;
+  background-color: $bgcolor;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $fontsize;
+  color: $mainfont;
+}
+a{
+  color: $linkcolor;
+}
+h1{
+  font-size: $h1size;
+}
+.main-img{
+  margin-left: 5%;
+  min-width: 40%;
+  max-width: 60%;
+}
+.info{
+  display: none;
+}

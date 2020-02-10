@@ -1,0 +1,20 @@
+@mixin pm0 {
+    margin: 0;
+    padding: 0;
+}
+@mixin port($h, $w, $x, $y){
+    position: absolute;
+    top: $h;
+    left: $w;
+    width: $x;
+    height: $y;
+}
+
+
+$bgcolor: #222;
+
+$mainfont: #fff;
+$textfont: #000;
+$linkcolor: #aaa;
+$fontsize: 1.2em;
+$h1size: 2em;
